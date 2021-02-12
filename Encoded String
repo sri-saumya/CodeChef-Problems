@@ -1,0 +1,54 @@
+# cook your dish here
+'''
+a,b,c,d,e,f,g,h |  i,j,k,l,m,n,o,p
+half. So the first bit of its encoding is 1.
+Now, among (i,j,k,l | m,n,o,p), j appears in the first half. So the second bit of its encoding is 0.
+Now, among (i,j | k,l), j appears in the first half. So the third bit of its encoding is 0.
+Now, among (i | j), j appears in the second half. So the fourth and last bit of its encoding is 1.
+'''
+for _ in range(int(input())):
+    n=int(input())
+    
+    l=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
+    s=input()
+    s=list((s))
+    for i in range(0,n,4):
+        l=(s[i:i+4])
+        if l == ['0','0','0','0']:
+            print('a',end="")
+        elif l==['1','1','1','1']:
+            print('p',end="")
+        elif l==['0','0','0','1']:
+            print('b',end="")
+        elif l==['0','0','1','0']:
+            print('c',end="")
+        elif l==['0','0','1','1']:
+            print('d',end="")
+        elif l==['0','1','0','0']:
+            print('e',end="")
+        elif l==['0','1','0','1']:
+            print('f',end="")
+        elif l==['0','1','1','0']:
+            print('g',end="")
+        elif l==['0','1','1','1']:
+            print('h',end="")
+        elif l==['1','0','0','0']:
+            print('i',end="")
+        elif l==['1','0','0','1']:
+            print('j',end="")
+        elif l==['1','0','1','0']:
+            print('k',end="")
+        elif l==['1','0','1','1']:
+            print('l',end="")
+        elif l==['1','1','0','0']:
+            print('m',end="")
+        elif l==['1','1','0','1']:
+            print('n',end="")
+        elif l==['1','1','1','0']:
+            print('o',end="")
+        else:
+            print('p',end="")
+    print()     
+            
+            
+            
